@@ -7,6 +7,17 @@ function esNumeroEntero(numero) {
   // -1212 ---> true 
   // 121.212 ---> false 
   // Tu código:
+if (typeof numero == "number"){
+  if (numero%1 == 0){
+      console.log("es numero entero "+numero);
+    return true;
+  }else{
+    return false;
+  }
+}
+else{
+  return false
+}
 }
 
 module.exports = esNumeroEntero;

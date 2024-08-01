@@ -11,7 +11,7 @@ function obtenerMayor(x, y) {
       return y;
      }
      if (x ==y){
-      return "cualquiera de los dos";
+      return x;
      }
 }
 
