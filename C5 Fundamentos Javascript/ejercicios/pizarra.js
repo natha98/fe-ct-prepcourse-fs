@@ -17,6 +17,17 @@ console.log("primo?"+esNumeroPrimo(6) );
 
 console.log("potemcia?:"+esPotenciaDeDos(3));
 
+console.log(obtenerElementoAleatorio(3));
+let array = ['natha', 'juli','alicia'];
+
+//agregarItemAlFinalDelArray(array, 'greg');
+
+console.log(invertirArray(array));
+array2 = [9,8,10,8,11,7];
+console.log(ordenarArray(array2));
+console.log(encontrarElemento(9, array2));
+console.log(convertirStringAMayusculas(array));
+
 
 function esTipoDato(valor) {
     // La función recibe un argumento llamado valor.
@@ -193,14 +204,13 @@ function numeroRandom() {
   // Tu código:
 var contador = 0;
 for (var i=1; i<=numero; i++){
-  console.log("numero"+numero);
-  console.log("i"+i);
+
 
   if(numero%i == 0 ){
     contador = contador+1;
   }
 
-  console.log(""+contador);
+
    if(i ==numero && contador ==2){
     return true;
    }   if(i ==numero && contador >=2){
@@ -210,4 +220,64 @@ for (var i=1; i<=numero; i++){
 }
 
 }
+
+function agregarItemAlFinalDelArray(array, elemento) {
+  // Agrega el "elemento" al final del arreglo recibido.
+  // Retorna el arreglo.
+  // Tu código:
+  array.push(elemento);
+  console.log(array);
+  return (array.push(elemento));
+}
+
+function invertirArray(array) {
+  // Invierte el arreglo array recibido por argumento.
+  // Tu código:
+  var arrayInvertido=[];
+  console.log("cual es el length "+array.length);
+  
+  for(let i = 0; i < array.length; i++ ){
+   
+        arrayInvertido[i]= array[array.length-i-1];
+  }
+  return arrayInvertido;
+}
+
+function ordenarArray(array) {
+  // Ordena los elementos del areglo array de menor a mayor.
+  // Devuelve el arreglo resultante.
+  // Tu código:
+ 
+  return array.sort((a, b) => a - b )
+}
+
+
+function encontrarElemento(num, array) {
+  // Busca el número pasado por argumento dentro del array.
+  // Si lo encuentras debes retornar el INDICE en el que se encuentra dentro del array.
+  // Si no se encuentra, retorna -1.
+  // Tu código:
+  console.log("utlizando el meotodo indexOF "+array.indexOf(num));
+  return array.indexOf(num)
+  
+}
+function obtenerElementoAleatorio(num) {
+  // Devuelve un elemento aleatorio del arreglo array.
+  // PISTA: Usa el método Math.random().
+  // Tu código:
+
+  //console.log("esta es un numero aleatorio "+ Math.round(Math.random()*(array.length-1)));
+ // return array[Math.random*];
+ var palabra ="natha";
+ console.log("cuanto caracterres tiene una palabra "+palabra.length);
+}
+
+function convertirStringAMayusculas(array) {
+  // Convierte a mayúsculas todos los strings del array.
+  // Retorna el arreglo resultante.
+  // Tu código:
+  var mayuscula = array.map(word=>word.toUpperCase());
+  console.log("convierto a mayuscula " +mayuscula);
+}
+
   
